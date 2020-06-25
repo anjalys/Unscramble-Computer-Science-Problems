@@ -4,11 +4,11 @@ It's ok if you don't understand how to read files.
 """
 import csv
 
-with open('texts.csv', 'r') as f:
+with open('/Applications/Udacity/P0/Unscramble-Computer-Science-Problems/texts.csv', 'r') as f:
     reader = csv.reader(f)
     texts = list(reader)
 
-with open('calls.csv', 'r') as f:
+with open('/Applications/Udacity/P0/Unscramble-Computer-Science-Problems/calls.csv', 'r') as f:
     reader = csv.reader(f)
     calls = list(reader)
 
@@ -29,28 +29,23 @@ def numbersCouldBeTeleMarketers():
 
     #declare sets for outgoing calls and other calls and texts 
     callers=set()
-    callReceivers=set()
-    textSenders=set()
-    textReceivers=set()
+    calltextSenderReceiver=set()
 
     ##loop through calls data
     for call in calls:
         caller=call[0]
         receiver=call[1]
         callers.add(caller)
-        callReceivers.add(receiver)
+        calltextSenderReceiver.add(receiver)
 
     #loop through texts data
     for text in texts:
         textSender=text[0]
         textReceiver=text[1]
-        textSenders.add(textSender)
-        textReceivers.add(textReceiver)
+        calltextSenderReceiver.add(textSender)
+        calltextSenderReceiver.add(textReceiver)
 
-    callers=callers.difference(callReceivers)
-    callers=callers.difference(textSenders)
-    callers=callers.difference(textReceivers)
-
+    callers=callers.difference(calltextSenderReceiver)
     telemarketers=list(callers)
 
     print("These numbers could be telemarketers:")

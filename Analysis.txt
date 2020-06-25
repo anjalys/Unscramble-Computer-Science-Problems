@@ -9,7 +9,7 @@ Task0:
 
 
 Task1: 
-	worse case complexity: O(n)+O(n)+O(nlogn)
+	worse case complexity: O(n) + O(n) + O(nlogn)
 	algorithm:
 	1.Function call for calls
 		a) initialize empty set [complexity: O(1)]
@@ -38,7 +38,7 @@ Task2:
 
 
 Task3: 
-	worse case complexity: [Part A: O(n) + O(nlogn), Part B: O(n)]
+	worse case complexity: [Part A: O(nlogn), Part B: O(n)]
 	algorithm:
 
 	Part A:
@@ -59,7 +59,7 @@ Task3:
 
 
 Task4: 
-	worse case complexity: O(nlogn)+O(5n)
+	worse case complexity: O(nlogn)
 	algorithm:
 
 	1. initialize two empty sets [complexity: O(1)+O(1)]
@@ -68,5 +68,5 @@ Task4:
 	4. sort function [complexity: O(nlogn)]
 	5. print resulting string to console [complexity: O(1))]
 
-	Total Complexity: [O(5n)+O(nlogn)+O(3)]
+	Total Complexity: [O(2n)+O(nlogn)+O(3)]
 
